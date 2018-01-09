@@ -20,11 +20,11 @@ script:
 after_success:
  - pip install coveralls
  - coveralls
+ - pyflakes .
 
 after_script:
  - coverage report
  - pip install pep8 pyflakes
- - pyflakes .
  - pep8 --statistics --count .
 
 matrix:
