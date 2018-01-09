@@ -15,7 +15,8 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import sys, os, fnmatch
+import fnmatch
+import os
 
 from olefile import __version__, __author__
 
@@ -224,7 +225,7 @@ def main():
 ##    for scheme in list(INSTALL_SCHEMES.values()):
 ##        scheme['data'] = scheme['purelib']
 
-    dist = setup(
+    setup(
         name=name,
         version=version,
         description=desc,
